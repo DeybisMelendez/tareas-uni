@@ -10,6 +10,7 @@ typedef struct {
     float calificaciones[NUM_CORTES];
 } Estudiante;
 
+// Lista de estudiantes
 Estudiante estudiantes[NUM_ESTUDIANTES];
 
 // Función para ingresar los datos de los estudiantes
