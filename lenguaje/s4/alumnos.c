@@ -1,3 +1,5 @@
+/* Elaborado por Deybis Antonio Melendez Vargas */
+
 #include <stdio.h>
 #include <string.h>
 
