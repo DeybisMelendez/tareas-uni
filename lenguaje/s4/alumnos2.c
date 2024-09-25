@@ -60,7 +60,7 @@ int main() {
         if (opcion == 1) {
             printf("Ingrese el nombre del estudiante: ");
             scanf("%s", nombre_estudiante);
-            mostrarCalificaciones(estudiantes, NUM_ESTUDIANTES, nombre_estudiante);
+            mostrarCalificaciones(NUM_ESTUDIANTES, nombre_estudiante);
         }
     } while (opcion != 2);
 
