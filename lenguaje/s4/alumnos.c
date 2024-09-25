@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 
-#define NUM_ESTUDIANTES 3
-#define NUM_CORTES 3 // Cortes evaluativos
+#define NUM_ESTUDIANTES 2
+#define NUM_CORTES 2 // Cortes evaluativos
 
 // Definir la estructura de un estudiante
 typedef struct {
