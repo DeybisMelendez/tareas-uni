@@ -17,7 +17,7 @@ Estudiante estudiantes[NUM_ESTUDIANTES];
 void ingresar_datos(int num_estudiantes) {
     for (int i = 0; i < num_estudiantes; i++) {
         printf("Ingrese el nombre del estudiante #%d: ", i + 1);
-        scanf("%c", estudiantes[i].nombre);
+        scanf("%s", estudiantes[i].nombre);
         for (int j = 0; j < NUM_CORTES; j++) {
             printf("Ingrese la calificación del estudiante %s en el corte #%d: ", estudiantes[i].nombre, j + 1);
             scanf("%d", &estudiantes[i].calificaciones[j]);
