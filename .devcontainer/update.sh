@@ -23,5 +23,5 @@ fi
 # Obtener y fusionar cambios del repositorio upstream
 $GIT fetch upstream
 COMMIT=$(date +"%Y-%m-%d %H:%M:%S")
-$GIT merge upstream/main -m "$COMMIT"
+$GIT merge upstream/main -m "$COMMIT" --allow-unrelated-histories
 $GIT push
