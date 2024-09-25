@@ -55,7 +55,7 @@ int main(void) {
         printf("\nOpciones:\n");
         printf("1. Mostrar calificaciones de un estudiante\n");
         printf("2. Salir\n");
-        printf("Elija una opción: ");
+        printf("Elija una opción:\n");
         scanf("%d", &opcion);
 
         if (opcion == 1) {
