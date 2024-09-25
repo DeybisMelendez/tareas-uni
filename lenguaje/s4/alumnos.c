@@ -48,7 +48,7 @@ int main(void) {
     int opcion;
 
     // Ingresar los datos de los estudiantes
-    ingresarDatos(NUM_ESTUDIANTES);
+    ingresar_datos(NUM_ESTUDIANTES);
 
     // Consultar las calificaciones
     do {
