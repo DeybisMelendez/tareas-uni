@@ -5,10 +5,12 @@
 #define NUM_CORTES 3 // Cortes evaluativos
 
 // Definir la estructura de un estudiante
-struct Estudiante {
+typedef struct {
     char nombre[50];
     float calificaciones[NUM_CORTES];
-};
+} Estudiante;
+
+Estudiante estudiantes[NUM_ESTUDIANTES];
 
 // Función para ingresar los datos de los estudiantes
 void ingresarDatos(struct Estudiante estudiantes[], int num_estudiantes) {
@@ -41,7 +43,6 @@ void mostrarCalificaciones(struct Estudiante estudiantes[], int num_estudiantes,
 }
 
 int main() {
-    struct Estudiante estudiantes[NUM_ESTUDIANTES];
     char nombre_estudiante[50];
     int opcion;
 
