@@ -33,7 +33,7 @@ void mostrar_calificaciones(int num_estudiantes, char nombre_estudiante[]) {
             encontrado = 1;
             printf("Calificaciones del estudiante %s:\n", estudiantes[i].nombre);
             for (int j = 0; j < NUM_CORTES; j++) {
-                printf("Corte #%d: %d\n", j + 1, estudiantes[i].calificaciones[j]);
+                printf("Corte Evaluativo %d: %d\n", j + 1, estudiantes[i].calificaciones[j]);
             }
             break;
         }
