@@ -59,7 +59,7 @@ int main(void) {
         scanf("%d", &opcion);
 
         if (opcion == 1) {
-            printf("Ingrese el nombre del estudiante: ");
+            printf("Ingrese el nombre del estudiante:\n");
             scanf("%s", nombre_estudiante);
             mostrar_calificaciones(NUM_ESTUDIANTES, nombre_estudiante);
         }
