@@ -7,7 +7,7 @@
 // Definir la estructura de un estudiante
 typedef struct {
     char nombre[50];
-    float calificaciones[NUM_CORTES];
+    int calificaciones[NUM_CORTES];
 } Estudiante;
 
 // Lista de estudiantes
@@ -20,7 +20,7 @@ void ingresar_datos(int num_estudiantes) {
         scanf("%s", estudiantes[i].nombre);
         for (int j = 0; j < NUM_CORTES; j++) {
             printf("Ingrese la calificación del estudiante %s en el corte #%d: ", estudiantes[i].nombre, j + 1);
-            scanf("%f", &estudiantes[i].calificaciones[j]);
+            scanf("%d", &estudiantes[i].calificaciones[j]);
         }
     }
 }
