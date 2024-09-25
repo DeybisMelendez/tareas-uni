@@ -1,0 +1,67 @@
+#include <stdio.h>
+#include <string.h>
+
+#define NUM_ESTUDIANTES 3
+#define NUM_CORTES 3
+
+// Definir la estructura de un estudiante
+struct Estudiante {
+    char nombre[50];
+    float calificaciones[NUM_CORTES];
+};
+
+// Función para ingresar los datos de los estudiantes
+void ingresarDatos(struct Estudiante estudiantes[], int num_estudiantes) {
+    for (int i = 0; i < num_estudiantes; i++) {
+        printf("Ingrese el nombre del estudiante #%d: ", i + 1);
+        scanf("%s", estudiantes[i].nombre);
+        for (int j = 0; j < NUM_CORTES; j++) {
+            printf("Ingrese la calificación del estudiante %s en el corte #%d: ", estudiantes[i].nombre, j + 1);
+            scanf("%f", &estudiantes[i].calificaciones[j]);
+        }
+    }
+}
+
+// Función para mostrar las calificaciones de un estudiante
+void mostrarCalificaciones(struct Estudiante estudiantes[], int num_estudiantes, char nombre_estudiante[]) {
+    int encontrado = 0;
+    for (int i = 0; i < num_estudiantes; i++) {
+        if (strcmp(estudiantes[i].nombre, nombre_estudiante) == 0) {
+            encontrado = 1;
+            printf("Calificaciones del estudiante %s:\n", estudiantes[i].nombre);
+            for (int j = 0; j < NUM_CORTES; j++) {
+                printf("Corte #%d: %.2f\n", j + 1, estudiantes[i].calificaciones[j]);
+            }
+            break;
+        }
+    }
+    if (!encontrado) {
+        printf("Estudiante no encontrado.\n");
+    }
+}
+
+int main() {
+    struct Estudiante estudiantes[NUM_ESTUDIANTES];
+    char nombre_estudiante[50];
+    int opcion;
+
+    // Ingresar los datos de los estudiantes
+    ingresarDatos(estudiantes, NUM_ESTUDIANTES);
+
+    // Consultar las calificaciones
+    do {
+        printf("\nOpciones:\n");
+        printf("1. Mostrar calificaciones de un estudiante\n");
+        printf("2. Salir\n");
+        printf("Elija una opción: ");
+        scanf("%d", &opcion);
+
+        if (opcion == 1) {
+            printf("Ingrese el nombre del estudiante: ");
+            scanf("%s", nombre_estudiante);
+            mostrarCalificaciones(estudiantes, NUM_ESTUDIANTES, nombre_estudiante);
+        }
+    } while (opcion != 2);
+
+    return 0;
+}
