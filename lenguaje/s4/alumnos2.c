@@ -13,7 +13,7 @@ typedef struct {
 Estudiante estudiantes[NUM_ESTUDIANTES];
 
 // Función para ingresar los datos de los estudiantes
-void ingresarDatos(struct Estudiante estudiantes[], int num_estudiantes) {
+void ingresarDatos(int num_estudiantes) {
     for (int i = 0; i < num_estudiantes; i++) {
         printf("Ingrese el nombre del estudiante #%d: ", i + 1);
         scanf("%s", estudiantes[i].nombre);
@@ -25,7 +25,7 @@ void ingresarDatos(struct Estudiante estudiantes[], int num_estudiantes) {
 }
 
 // Función para mostrar las calificaciones de un estudiante
-void mostrarCalificaciones(struct Estudiante estudiantes[], int num_estudiantes, char nombre_estudiante[]) {
+void mostrarCalificaciones(int num_estudiantes, char nombre_estudiante[]) {
     int encontrado = 0;
     for (int i = 0; i < num_estudiantes; i++) {
         if (strcmp(estudiantes[i].nombre, nombre_estudiante) == 0) {
@@ -47,7 +47,7 @@ int main() {
     int opcion;
 
     // Ingresar los datos de los estudiantes
-    ingresarDatos(estudiantes, NUM_ESTUDIANTES);
+    ingresarDatos(NUM_ESTUDIANTES);
 
     // Consultar las calificaciones
     do {
