@@ -20,7 +20,7 @@ void ingresar_datos() {
         scanf("%s\n", estudiantes[i].nombre);
         for (int j = 0; j < NUM_CORTES; j++) {
             printf("Ingrese la calificación del estudiante %s en el corte #%d: ", estudiantes[i].nombre, j + 1);
-            scanf("%d", &estudiantes[i].calificaciones[j]);
+            scanf("%d\n", &estudiantes[i].calificaciones[j]);
         }
     }
 }
