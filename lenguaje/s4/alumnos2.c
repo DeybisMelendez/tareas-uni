@@ -2,7 +2,7 @@
 #include <string.h>
 
 #define NUM_ESTUDIANTES 3
-#define NUM_CORTES 3
+#define NUM_CORTES 3 // Cortes evaluativos
 
 // Definir la estructura de un estudiante
 struct Estudiante {
