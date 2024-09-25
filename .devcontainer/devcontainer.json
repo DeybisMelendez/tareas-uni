@@ -1,0 +1,65 @@
+{
+    "name": "Plantilla de Codespaces para estudiantes UNI",
+    "extensions": [
+        // Extensiones para python
+        "donjayamanne.python-extension-pack",
+        "ms-python.isort",
+        "donjayamanne.python-environment-manager",
+        // Extensiones para C/C++
+        "ms-vscode.cpptools-extension-pack",
+        // Extensiones para Java
+        "vscjava.vscode-java-pack",
+        // Extensiones para el editor Visual Studio Code
+        "usernamehw.errorlens",
+        "oderwat.indent-rainbow",
+        "akamud.vscode-theme-onedark",
+        "emeraldwalk.runonsave",
+        "gruntfuggly.todo-tree"
+    ],
+    "dockerFile": "Dockerfile",
+    "settings": {
+        "files.exclude": {
+            "**/README.md": true,
+            "**/.devcontainer": true,
+            "**/LICENSE": true
+        },
+        // Configuración para C/C++
+        "C_Cpp.default.intelliSenseMode": "clang-x64",
+        "C_Cpp.codeAnalysis.clangTidy.enabled": true,
+        "C_Cpp.default.cStandard": "c99",
+        "C_Cpp.debugShortcut": false,
+        // Configuración para Java
+        "java.server.launchMode": "Standard",
+        // Configuración de tema del editor
+        // Indentación
+        "indentRainbow.indicatorStyle": "light",
+        "indentRainbow.lightIndicatorStyleLineWidth": 2,
+        "indentRainbow.colors": [
+            "rgba(255,255,64,0.3)",
+            "rgba(127,255,127,0.3)",
+            "rgba(255,127,255,0.3)",
+            "rgba(79,236,236,0.3)"
+        ],
+        // Tema del editor
+        "workbench.colorTheme": "Atom One Dark",
+        // Tipografía del editor
+        "editor.fontFamily": "Fira Code, 'monospace', monospace",
+        "editor.fontLigatures": true,
+        "editor.fontWeight": "500",
+        "editor.fontSize": 14,
+        "errorLens.fontFamily": "Fira Code, 'monospace', monospace",
+        // Configuración de run on save para automatizar git
+        "emeraldwalk.runonsave": {
+            "commands": [
+                {
+                    "match": ".*",
+                    "isAsync": true,
+                    "cmd": "sh .devcontainer/autogit.sh"
+                }
+            ]
+        },
+        "files.autoSave": "off"
+    },
+    // Actualiza el repositorio cada vez que carga vscode
+    "postAttachCommand": "sh .devcontainer/update.sh"
+}
