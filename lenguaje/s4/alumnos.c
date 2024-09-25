@@ -14,8 +14,8 @@ typedef struct {
 Estudiante estudiantes[NUM_ESTUDIANTES];
 
 // Función para ingresar los datos de los estudiantes
-void ingresar_datos(int num_estudiantes) {
-    for (int i = 0; i < num_estudiantes; i++) {
+void ingresar_datos() {
+    for (int i = 0; i < NUM_ESTUDIANTES; i++) {
         printf("Ingrese el nombre del estudiante #%d: ", i + 1);
         scanf("%s", estudiantes[i].nombre);
         for (int j = 0; j < NUM_CORTES; j++) {
