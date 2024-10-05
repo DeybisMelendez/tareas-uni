@@ -13,7 +13,7 @@ void imprimir_reversa(char *cadena) {
 }
 
 int main(void) {
-    char cadena[256];  // Tamaño máximo de la cadena
+    char cadena[256];// Tamaño máximo de la cadena
     
     printf("Introduce una cadena de caracteres:\n");
     fgets(cadena, sizeof(cadena), stdin);
