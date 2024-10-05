@@ -6,7 +6,7 @@
 #define NUM_ESTUDIANTES 2
 #define NUM_CORTES 2 // Cortes evaluativos
 
-// Definir la estructura de un estudiante
+// Definir la estructura de un Estudiante
 typedef struct {
     char nombre[50];
     int calificaciones[NUM_CORTES];
