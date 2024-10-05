@@ -12,7 +12,7 @@ void imprimir_reversa(char *cadena) {
     printf("\n");
 }
 
-int main() {
+int main(void) {
     char cadena[100];  // Tamaño máximo de la cadena
     
     printf("Introduce una cadena de caracteres: ");
