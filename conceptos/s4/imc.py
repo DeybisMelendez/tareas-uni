@@ -1,3 +1,5 @@
+# Elaborado por Deybis Antonio Melendez Vargas
+
 def calcular_imc(peso_kg, altura_m):
     """Función que calcula el IMC de una persona"""
     
