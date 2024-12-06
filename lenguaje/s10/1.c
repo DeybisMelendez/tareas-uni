@@ -1,8 +1,3 @@
-/*
-Ejercicio elaborado en pareja por:
-- Deybis Antonio Melendez Vargas
-- Nelson David Cordoba Cordero
-*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
